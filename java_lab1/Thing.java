@@ -5,7 +5,9 @@ public class Thing extends Object{
 		n=name;
 	}
 	public String toString(){
-		return getClass().getSimpleName()+" "+n;
+		String c=getClass().getSimpleName();
+		if(c.equals("Thing")) return n;
+		return n+" "+c;
 		
 	}
 }

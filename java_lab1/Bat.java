@@ -10,13 +10,10 @@ public class Bat extends Creature implements Flyer{
 		fly();
 	}
 	public void eat(Thing aThing) {
-		if(aThing.getClass().getSimpleName()!="Creature"&&aThing.getClass().getSimpleName()!="Thing")
-			return;
-		else{if(aThing.getClass().getSimpleName()=="Creature"){
-				System.out.println("{"+super.n+"}{"+super.getClass().getSimpleName()+"} won't eat {"+aThing+"}");
-				}else{
-					super.eat(aThing);
-				}
+		if(aThing.getClass().getSimpleName()=="Thing")
+			System.out.println("{"+super.n+"}{"+super.getClass().getSimpleName()+"} won't eat {"+aThing+"}");
+		else{
+			super.eat(aThing);
 		}
 			
 	}
