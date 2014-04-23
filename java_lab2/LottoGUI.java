@@ -4,6 +4,7 @@ import java.awt.GridLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 
 public class LottoGUI {
@@ -31,8 +32,10 @@ public class LottoGUI {
 		for(int i=0;i<49;i++){
 			panel2.add(new JButton(""+i));
 		}
+		JTextField text1=new JTextField("Picking Numbers...                                                                                           $10");
 		frame.getContentPane().add(BorderLayout.WEST, panel);
 		frame.getContentPane().add(BorderLayout.EAST, panel2);
+		frame.getContentPane().add(BorderLayout.SOUTH, text1);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.pack();
 		frame.setVisible(true);
